@@ -1,0 +1,37 @@
+identity:
+  name: read_excel
+  author: obei
+  label:
+    en_US: read_excel
+    zh_Hans: 读取Excel文件为JSON数组
+description:
+  human:
+    en_US: Read and parse an Excel file, output as a JSON array
+    zh_Hans: 读取并解析excel文件，输出为json数组
+  llm: 读取并解析excel文件，输出为json数组
+parameters:
+  - name: file_url
+    type: string
+    required: true
+    label:
+      en_US: File URL
+      zh_Hans: 文件链接
+    human_description:
+      en_US: File URL
+      zh_Hans: 文件链接
+    llm_description: 文件链接
+    form: llm
+  - name: sheet_name
+    type: string
+    required: false
+    label:
+      en_US: Sheet Name
+      zh_Hans: sheet页名称
+    human_description:
+      en_US: Sheet name
+      zh_Hans: sheet页名称
+    llm_description: sheet页名称
+    form: llm
+extra:
+  python:
+    source: tools/read_excel/read_excel.py

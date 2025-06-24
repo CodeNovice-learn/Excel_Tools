@@ -1,0 +1,53 @@
+version: 0.0.1
+type: plugin
+author: obei
+name: excel_tools
+label:
+  en_US: excel_tools
+  ja_JP: excel_tools
+  zh_Hans: Excel工具
+  pt_BR: excel_tools
+description:
+  en_US: 支持读取Excel文件和导出数据到Excel文件
+  ja_JP: 支持读取Excel文件和导出数据到Excel文件
+  zh_Hans: 支持读取Excel文件和导出数据到Excel文件
+  pt_BR: 支持读取Excel文件和导出数据到Excel文件
+icon: excel.svg
+resource:
+  memory: 268435456
+  permission:
+    tool:
+      enabled: false
+    model:
+      enabled: false
+      llm: false
+      text_embedding: false
+      rerank: false
+      tts: false
+      speech2text: false
+      moderation: false
+    node:
+      enabled: false
+    endpoint:
+      enabled: false
+    app:
+      enabled: false
+    storage:
+      enabled: false
+      size: 1024  
+plugins:
+  tools:
+    - provider/excel_tools.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+  minimum_dify_version: null
+created_at: 2025-06-17T09:22:09.4598385+08:00
+privacy: PRIVACY.md
+verified: false

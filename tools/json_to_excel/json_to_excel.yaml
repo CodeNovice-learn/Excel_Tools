@@ -1,0 +1,37 @@
+identity:
+  name: json_to_excel
+  author: obei
+  label:
+    en_US: json_to_excel
+    zh_Hans: JSON字典转化成Excel文件
+description:
+  human:
+    en_US: Convert a JSON string to a JSON array
+    zh_Hans: 将json字符串输出为json数组
+  llm: 将json字符串输出为json数组
+parameters:
+  - name: json_str
+    type: string
+    required: true
+    label:
+      en_US: JSON String
+      zh_Hans: JSON字典字符串
+    human_description:
+      en_US: JSON string
+      zh_Hans: json字符串
+    llm_description: json字符串
+    form: llm
+  - name: file_name
+    type: string
+    required: false
+    label:
+      en_US: file name
+      zh_Hans: 导出文件名称
+    human_description:
+      en_US: file name
+      zh_Hans: 导出文件名称
+    llm_description: 导出文件名称
+    form: llm
+extra:
+  python:
+    source: tools/json_to_excel/json_to_excel.py
