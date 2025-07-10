@@ -3,7 +3,7 @@ identity:
   name: excel_tools
   label:
     en_US: excel_tools
-    zh_Hans: excel_tools
+    zh_Hans: Excel工具
   description:
     en_US: Read and export Excel files utility
     zh_Hans: 读取excel文件和导出excel文件工具
@@ -11,6 +11,7 @@ identity:
 tools:
   - tools/read_excel/read_excel.yaml
   - tools/json_to_excel/json_to_excel.yaml
+  - tools/read_excel_by_page/read_excel_by_page.yaml
 extra:
   python:
     source: provider/excel_tools.py

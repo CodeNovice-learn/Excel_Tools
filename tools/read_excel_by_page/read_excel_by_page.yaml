@@ -1,0 +1,66 @@
+identity:
+  name: read_excel_by_page
+  author: obei
+  label:
+    en_US: read_excel_by_page
+    zh_Hans: 分页读取Excel文件为JSON数组
+description:
+  human:
+    en_US: Read and parse an Excel file, output as a JSON array
+    zh_Hans: 分页读取并解析excel文件，输出为json数组
+  llm: 分页读取并解析excel文件，输出为json数组
+parameters:
+  - name: file_url
+    type: string
+    required: true
+    label:
+      en_US: File URL
+      zh_Hans: 文件链接
+    human_description:
+      en_US: File URL
+      zh_Hans: 文件链接
+    llm_description: 文件链接
+    form: llm
+  - name: sheet_name
+    type: string
+    required: false
+    label:
+      en_US: Sheet Name
+      zh_Hans: sheet页名称
+    human_description:
+      en_US: Sheet name
+      zh_Hans: sheet页名称
+    llm_description: sheet页名称
+    form: llm
+  - name: page_num
+    type: number
+    required: false
+    label:
+        en_US: Page Number
+        zh_Hans: 页码
+    human_description:
+      en_US: Page number to read from the Excel file
+      zh_Hans: 要读取的Excel文件页码
+    llm_description: 页码
+    form: llm
+  - name: page_size
+    type: number
+    required: false
+    label:
+      en_US: Page Size
+      zh_Hans: 页大小
+    human_description:
+      en_US: Number of rows per page to read from the Excel file
+      zh_Hans: 每页要读取的行数
+    llm_description: 页大小
+    form: llm
+extra:
+  python:
+    source: tools/read_excel_by_page/read_excel_by_page.py
+output_schema:
+  type: object
+  properties:
+    data:
+      type: array
+      items:
+        type: object

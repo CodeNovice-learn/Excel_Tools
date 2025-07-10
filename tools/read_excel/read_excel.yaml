@@ -35,3 +35,10 @@ parameters:
 extra:
   python:
     source: tools/read_excel/read_excel.py
+output_schema:
+  type: object
+  properties:
+    data:
+      type: array
+      items:
+        type: object
